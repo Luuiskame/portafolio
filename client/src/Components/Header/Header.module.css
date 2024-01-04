@@ -1,0 +1,63 @@
+.header {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.imagesContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialsContainer {
+    height: 3rem;
+}
+
+.socialsContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+.mainImageContainer{
+    width: 14rem;
+
+    & img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.headerTextContainer {
+    text-align: center;
+
+    & button{
+        margin-top: 1.6rem;
+        padding: 1rem;
+        letter-spacing: 2px;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        background: transparent;
+
+        &::after{
+            content: '';
+            margin-top: .6em;
+            position: absolute;
+            width: 110px;
+            height: 3px; /* Grosor de la línea */
+            background-color: #4EE1A0;
+            display: block;
+            /* z-index: -1;  */
+        }
+    }
+    
+}
+
+.bottomLine {
+    height: 3px;
+    width: 90%;
+    background-color: #D8D8D8;
+}

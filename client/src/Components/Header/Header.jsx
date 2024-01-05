@@ -8,6 +8,9 @@ const Header = ()=>{
     return(
         <header className={styles.header}>
             <div className={styles.imagesContainer}>
+                <h3>Resume</h3>
+                
+                <div className={styles.twoImagesContainer}>
                 <figure className={styles.socialsContainer}>
                 <img src={githubLogo} alt="github logo" />
                 </figure>
@@ -15,6 +18,9 @@ const Header = ()=>{
                 <figure className={styles.socialsContainer}>
                     <img src={linkedinLogo} alt="linkedin logo" />
                 </figure>
+
+                </div>
+                
             </div>
 
             <figure className={styles.mainImageContainer}>

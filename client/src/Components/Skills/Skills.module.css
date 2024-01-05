@@ -13,7 +13,6 @@
     gap: .6rem;
 
     & h2{
-        color: White;
     }
 }
 
@@ -21,10 +20,39 @@
     display: flex;
     flex-direction: column;
     gap: .6rem;
+
+    & h2{
+    }
 }
 
 .bottomLine {
     height: 3px;
     width: 90%;
     background-color: #D8D8D8;
+}
+
+@media screen and (min-width: 768px){
+
+    .skillsContainer{
+        width: 90%;
+        margin: 2rem auto;
+        align-items: start;
+        gap: 5rem;
+    }
+    .frontendSkills{
+        flex-direction: row;
+        justify-content: end;
+        gap: 3rem;
+
+    }
+
+    .backendAndDatabaseSkills {
+        flex-direction: row;
+        justify-content: end;
+        gap: 3rem;
+    }
+
+    .bottomLine{
+        display: none;
+    }
 }

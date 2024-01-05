@@ -15,12 +15,25 @@ const Projects = ()=>{
             </div>
                 
                 <div className={styles.projectsContainer}>
+                    
                     <figure className={styles.projectContainer}>
                         <img src={EngPartner} alt="EngPartner app picture" />
+
+                        <h3>Chat app with real time translation</h3>
+                        <div className={styles.projectBtnsContainer}>
+                        <button>View Project</button>
+                        <button>View Code</button>
+                        </div>
                     </figure>
 
                     <figure className={styles.projectContainer}>
                         <img src={dogsAppPicture} alt="Dogs app picture" />
+
+                        <h3>Dogs searcher app</h3>
+                        <div className={styles.projectBtnsContainer}>
+                        <button>View Project</button>
+                        <button>View Code</button>
+                        </div>
                     </figure>
                 </div>
         </div>

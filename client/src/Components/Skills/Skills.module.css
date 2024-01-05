@@ -4,4 +4,27 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 2rem;
+}
+
+.frontendSkills {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+
+    & h2{
+        color: White;
+    }
+}
+
+.backendAndDatabaseSkills{
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.bottomLine {
+    height: 3px;
+    width: 90%;
+    background-color: #D8D8D8;
 }

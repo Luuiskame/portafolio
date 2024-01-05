@@ -1,8 +1,11 @@
 import Header from "../Header/Header"
 import Skills from "../Skills/Skills"
+
+//? styles
+import styles from './Main.module.css'
 const Main = ()=>{
     return(
-        <main>
+        <main className={styles.main}>
             <Header/>
             <Skills/>
         </main>

@@ -32,6 +32,8 @@
 
 .headerTextContainer {
     text-align: center;
+    max-width: 500px;
+    
 
     & button{
         margin-top: 1.6rem;
@@ -52,6 +54,12 @@
             display: block;
             /* z-index: -1;  */
         }
+
+    }
+
+    & p {
+        margin-top: .8rem;
+        color: #d9d9d9;
     }
     
 }
@@ -60,4 +68,31 @@
     height: 3px;
     width: 90%;
     background-color: #D8D8D8;
+}
+
+@media screen and (min-width: 768px){
+    .header {
+        display: grid;
+        grid-template-areas:
+            "navbar"
+            "textWithImage"
+            "line";
+    }
+
+    .imagesContainer{
+        grid-area: navbar;
+    }
+
+    .headerTextContainer{
+        text-align: start;
+        grid-area: textWithImage;
+    }
+
+    .mainImageContainer{
+        grid-area: textWithImage;
+    }
+
+    .bottomLine{
+        grid-area: line;
+    }
 }

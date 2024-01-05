@@ -32,7 +32,7 @@
 
 .headerTextContainer {
     text-align: center;
-    max-width: 500px;
+    max-width: 600px;
     
 
     & button{
@@ -49,10 +49,9 @@
             margin-top: .6em;
             position: absolute;
             width: 110px;
-            height: 3px; /* Grosor de la línea */
+            height: 3px; 
             background-color: #4EE1A0;
             display: block;
-            /* z-index: -1;  */
         }
 
     }
@@ -61,12 +60,17 @@
         margin-top: .8rem;
         color: #d9d9d9;
     }
+
+    & h1 {
+        font-weight: 700;
+        font-size: 2.6rem;
+    }
     
 }
 
 .bottomLine {
     height: 3px;
-    width: 90%;
+    width: 100%;
     background-color: #D8D8D8;
 }
 
@@ -74,22 +78,28 @@
     .header {
         display: grid;
         grid-template-areas:
-            "navbar"
-            "textWithImage"
-            "line";
+            "navbar navbar"
+            "textWithImage image"
+            "line line";
     }
 
     .imagesContainer{
         grid-area: navbar;
+        order: -1;
     }
 
     .headerTextContainer{
         text-align: start;
         grid-area: textWithImage;
-    }
+        justify-self: start;
+
+        & h1{
+            font-size: 4rem;
+        }
+    } 
 
     .mainImageContainer{
-        grid-area: textWithImage;
+        grid-area: image;
     }
 
     .bottomLine{

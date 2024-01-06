@@ -14,7 +14,7 @@ const Header = ()=>{
     const [displayDowloadMessage, setDisplayDowloadMessage] = useState(false)
 
     const handleClick = ()=>{
-        setDisplayDowloadMessage(true)
+        setDisplayDowloadMessage(!displayDowloadMessage)
         console.log(displayDowloadMessage)
     }
     return(
@@ -52,10 +52,10 @@ const Header = ()=>{
 
             <div className={styles.bottomLine}></div>
 
-            <div className={styles.dowloadMessageContainer}>
+            <div className={displayDowloadMessage ? styles.displayCard : styles.displayCardOff}>
                 <p>are you sure you want to dowload Luis Manzano's cv?</p>
 
-                <div className={styles.twoDowloadBtnsContainer}>
+                <div className={styles.displayCardBtnsContainer}>
                     <button>cancel</button>
                     <button>Dowload</button>
                 </div>

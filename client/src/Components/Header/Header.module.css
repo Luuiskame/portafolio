@@ -91,6 +91,13 @@
     background-color: #D8D8D8;
 }
 
+.displayCardOff {
+    display: none;
+}
+
+.displayCard {
+    display: flex;
+}
 @media screen and (min-width: 768px){
     .header {
         display: grid;

@@ -1,6 +1,7 @@
 import Header from "../Header/Header"
 import Skills from "../Skills/Skills"
 import Projects from "../Projects/Projects"
+import Footer from "../Footer/Footer"
 
 //? styles
 import styles from './Main.module.css'
@@ -10,6 +11,7 @@ const Main = ()=>{
             <Header/>
             <Skills/>
             <Projects/>
+            <Footer/>
         </main>
     )
 }

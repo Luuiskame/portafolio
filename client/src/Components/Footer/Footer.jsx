@@ -2,6 +2,9 @@ import styles from './Footer.module.css'
 import githubLogo from '../../assets/github-mark.svg'
 import linkedinLogo from '../../assets/icons8-linkedin.svg'
 
+const github = "https://github.com/Luuiskame"
+const linkedin = "https://www.linkedin.com/in/luis-manzano-088635258"
+
 const Footer = ()=>{
     return(
         <footer className={styles.footer}>
@@ -30,11 +33,15 @@ const Footer = ()=>{
 
             <div className={styles.twoImagesContainer}>
                 <figure className={styles.socialsContainer}>
+                <a href={github} target='_blank'>
                 <img src={githubLogo} alt="github logo" />
+                </a>
                 </figure>
 
                 <figure className={styles.socialsContainer}>
+                <a href={linkedin} target='_blank'>
                     <img src={linkedinLogo} alt="linkedin logo" />
+                    </a>
                 </figure>
 
                 </div>

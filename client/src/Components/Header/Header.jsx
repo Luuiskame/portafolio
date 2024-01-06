@@ -4,6 +4,10 @@ import githubLogo from '../../assets/github-mark.svg'
 import linkedinLogo from '../../assets/icons8-linkedin.svg'
 import mainImage from '../../assets/ProjectsPictures/main-picture-portafolio.jpg'
 
+// socials 
+const github = "https://github.com/Luuiskame"
+const linkedin = "https://www.linkedin.com/in/luis-manzano-088635258"
+
 const Header = ()=>{
     return(
         <header className={styles.header}>
@@ -12,11 +16,15 @@ const Header = ()=>{
                 
                 <div className={styles.twoImagesContainer}>
                 <figure className={styles.socialsContainer}>
+                <a href={github} target='_blank'>
                 <img src={githubLogo} alt="github logo" />
+                </a>
                 </figure>
 
                 <figure className={styles.socialsContainer}>
+                <a href={linkedin} target='_blank'>
                     <img src={linkedinLogo} alt="linkedin logo" />
+                    </a>
                 </figure>
 
                 </div>

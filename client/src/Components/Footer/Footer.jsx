@@ -5,6 +5,9 @@ import linkedinLogo from '../../assets/icons8-linkedin.svg'
 const Footer = ()=>{
     return(
         <footer className={styles.footer}>
+
+            <div className={styles.widthContainer}>
+
             <div className={styles.footerTextContainer}>
             <h2>Contact</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, praesentium odio deserunt iusto impedit reprehenderit error distinctio non ratione ex culpa deleniti pariatur nam expedita ad ipsa nostrum modi inventore?</p>
@@ -35,6 +38,9 @@ const Footer = ()=>{
                 </figure>
 
                 </div>
+
+            </div>
+            
             
         </footer>
     )

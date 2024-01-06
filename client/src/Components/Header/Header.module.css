@@ -101,6 +101,7 @@
     background-color: red;
     height: 250px;
     width: 55%;
+    max-width: 300px;
     top: 35%;
 
     display: flex;
@@ -109,6 +110,14 @@
     border: 1px solid #32b1fe;
     background-color: #001e32;
     border-radius: 5px;
+
+    & p{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 2rem;
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
 }
 
 .displayCardBtnsContainer {
@@ -116,10 +125,14 @@
     justify-content: center;
     width: 90%;
     margin: 0 auto;
+    gap: .4rem;
 
     & button{
         width: 50%;
+        height: 40px;
         max-width: 100px;
+        border: 1px solid #32b1fe;
+        background-color: transparent;
     }
 }
 @media screen and (min-width: 768px){

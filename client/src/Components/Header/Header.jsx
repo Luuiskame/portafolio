@@ -17,6 +17,10 @@ const Header = ()=>{
         setDisplayDowloadMessage(!displayDowloadMessage)
         console.log(displayDowloadMessage)
     }
+
+    const cancelDowload = ()=>{
+        setDisplayDowloadMessage(!displayDowloadMessage)
+    }
     return(
         <header className={styles.header}>
             <div className={styles.imagesContainer}>
@@ -56,7 +60,7 @@ const Header = ()=>{
                 <p>are you sure you want to dowload Luis Manzano's cv?</p>
 
                 <div className={styles.displayCardBtnsContainer}>
-                    <button>cancel</button>
+                    <button onClick={cancelDowload}>cancel</button>
                     <button>Dowload</button>
                 </div>
             </div>

@@ -14,6 +14,7 @@
 .footerTextContainer {
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 3rem;
 }
 
 .bottomLine {
@@ -37,6 +38,11 @@
 
     & input {
         color: #000;
+        border: none;
+        border-bottom: 1px solid  #D8D8D8;
+        background-color: transparent;
+        margin-bottom: 4rem;
+
     }
 
     & button{

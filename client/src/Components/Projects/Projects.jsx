@@ -4,6 +4,8 @@ import styles from './Projects.module.css'
 //Projects images
 import EngPartner from '../../assets/ProjectsPictures/image.png'
 import dogsAppPicture from '../../assets/ProjectsPictures/dogsApp.png'
+import rickandmoryAppPicture from '../../assets/ProjectsPictures/rickAndMortyApp.png'
+import rockScissorsPaperGameAppPicture from '../../assets/ProjectsPictures/RockScissorsAndPapersGameProject.png'
 
 const Projects = ()=>{
     return(
@@ -30,6 +32,26 @@ const Projects = ()=>{
                         <img src={dogsAppPicture} alt="Dogs app picture" />
 
                         <h3>Dogs searcher app</h3>
+                        <div className={styles.projectBtnsContainer}>
+                        <button>View Project</button>
+                        <button>View Code</button>
+                        </div>
+                    </figure>
+
+                    <figure className={styles.projectContainer}>
+                        <img src={rickandmoryAppPicture} alt="Dogs app picture" />
+
+                        <h3>Rick And Morty searcher app</h3>
+                        <div className={styles.projectBtnsContainer}>
+                        <button>View Project</button>
+                        <button>View Code</button>
+                        </div>
+                    </figure>
+
+                    <figure className={styles.projectContainer}>
+                        <img src={rockScissorsPaperGameAppPicture} alt="Dogs app picture" />
+
+                        <h3>Rock Paper Scissors Game (vanilla js)</h3>
                         <div className={styles.projectBtnsContainer}>
                         <button>View Project</button>
                         <button>View Code</button>

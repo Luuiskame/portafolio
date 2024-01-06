@@ -7,12 +7,20 @@ import mainImage from '../../assets/ProjectsPictures/main-picture-portafolio.jpg
 // socials 
 const github = "https://github.com/Luuiskame"
 const linkedin = "https://www.linkedin.com/in/luis-manzano-088635258"
+import cv from '../../assets/Luis-manzanoCV.pdf'
+import { useState } from 'react'
 
 const Header = ()=>{
+    const [displayDowloadMessage, setDisplayDowloadMessage] = useState(false)
+
+    const handleClick = ()=>{
+        setDisplayDowloadMessage(true)
+        console.log(displayDowloadMessage)
+    }
     return(
         <header className={styles.header}>
             <div className={styles.imagesContainer}>
-                <h3>Resume</h3>
+                <h3><a onClick={handleClick} >resume</a></h3>
                 
                 <div className={styles.twoImagesContainer}>
                 <figure className={styles.socialsContainer}>
@@ -43,6 +51,15 @@ const Header = ()=>{
             </div>
 
             <div className={styles.bottomLine}></div>
+
+            <div className={styles.dowloadMessageContainer}>
+                <p>are you sure you want to dowload Luis Manzano's cv?</p>
+
+                <div className={styles.twoDowloadBtnsContainer}>
+                    <button>cancel</button>
+                    <button>Dowload</button>
+                </div>
+            </div>
         </header>
     )
 }

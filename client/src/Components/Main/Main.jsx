@@ -11,7 +11,6 @@ const Main = ()=>{
             <Header/>
             <Skills/>
             <Projects/>
-            <Footer/>
         </main>
     )
 }

@@ -4,10 +4,13 @@ import linkedinLogo from '../../assets/icons8-linkedin.svg'
 
 const Footer = ()=>{
     return(
-        <footer>
+        <footer className={styles.footer}>
+            <div className={styles.footerTextContainer}>
             <h2>Contact</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, praesentium odio deserunt iusto impedit reprehenderit error distinctio non ratione ex culpa deleniti pariatur nam expedita ad ipsa nostrum modi inventore?</p>
+            </div>
 
-            <form>
+            <form className={styles.footerForm}>
                 <label htmlFor="name">name</label>
                 <input type="text" name="name"/>
 
@@ -15,7 +18,7 @@ const Footer = ()=>{
                 <input type="text" name="email"/>
 
                 <label htmlFor="message">message</label>
-                <input type="text" />
+                <input className={styles.messageInput} type="text" name='message' />
 
                 <button type="submit">send message</button>
             </form>

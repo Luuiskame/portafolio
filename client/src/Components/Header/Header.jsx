@@ -2,7 +2,7 @@ import styles from './Header.module.css'
 
 import githubLogo from '../../assets/github-mark.svg'
 import linkedinLogo from '../../assets/icons8-linkedin.svg'
-import mainImage from '../../assets/design/main-picture-portafolio.jpg'
+import mainImage from '../../assets/ProjectsPictures/main-picture-portafolio.jpg'
 
 const Header = ()=>{
     return(

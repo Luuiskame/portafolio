@@ -7,7 +7,7 @@ import mainImage from '../../assets/ProjectsPictures/main-picture-portafolio.jpg
 // socials 
 const github = "https://github.com/Luuiskame"
 const linkedin = "https://www.linkedin.com/in/luis-manzano-088635258"
-import cv from '../../assets/Luis-manzanoCV.pdf'
+// import cv from '../../assets/Luis-manzanoCV.pdf'
 import { useState } from 'react'
 
 const Header = ()=>{
@@ -21,10 +21,21 @@ const Header = ()=>{
     const cancelDowload = ()=>{
         setDisplayDowloadMessage(!displayDowloadMessage)
     }
+
+    const handleDownloadCv = () => {
+        const link = document.createElement('a')
+        link.href = '/Luis-manzanoCV.pdf'
+        link.download = 'LuisManzanoCV.pdf'
+        document.body.appendChild(link)
+        link.click();
+        document.body.removeChild(link)
+        setDisplayDowloadMessage(!displayDowloadMessage)
+    }
+
     return(
         <header className={styles.header}>
             <div className={styles.imagesContainer}>
-                <h3><a onClick={handleClick} >resume</a></h3>
+                <h3 onClick={handleClick}>Dowload CV</h3>
                 
                 <div className={styles.twoImagesContainer}>
                 <figure className={styles.socialsContainer}>
@@ -61,7 +72,7 @@ const Header = ()=>{
 
                 <div className={styles.displayCardBtnsContainer}>
                     <button onClick={cancelDowload}>cancel</button>
-                    <button>Dowload</button>
+                    <button onClick={handleDownloadCv}>Dowload</button>
                 </div>
             </div>
         </header>

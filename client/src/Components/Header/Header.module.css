@@ -133,7 +133,13 @@
         max-width: 100px;
         border: 1px solid #32b1fe;
         background-color: transparent;
+        cursor: pointer;
+        &:hover{
+            background-color: #031927;
+        }
     }
+
+    
 }
 @media screen and (min-width: 768px){
     .header {
@@ -170,5 +176,9 @@
 
     .bottomLine{
         grid-area: line;
+    }
+    .displayCard {
+        justify-self: center;
+        max-width: 400px;
     }
 }

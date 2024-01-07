@@ -11,15 +11,15 @@ const linkedin = "https://www.linkedin.com/in/luis-manzano-088635258"
 import { useState } from 'react'
 
 const Header = ()=>{
-    const [displayDowloadMessage, setDisplayDowloadMessage] = useState(false)
+    const [displayDownloadMessage, setDisplayDownloadMessage] = useState(false)
 
     const handleClick = ()=>{
-        setDisplayDowloadMessage(!displayDowloadMessage)
-        console.log(displayDowloadMessage)
+        setDisplayDownloadMessage(!displayDownloadMessage)
+        console.log(displayDownloadMessage)
     }
 
-    const cancelDowload = ()=>{
-        setDisplayDowloadMessage(!displayDowloadMessage)
+    const cancelDownload = ()=>{
+        setDisplayDownloadMessage(!displayDownloadMessage)
     }
 
     const handleDownloadCv = () => {
@@ -29,13 +29,13 @@ const Header = ()=>{
         document.body.appendChild(link)
         link.click();
         document.body.removeChild(link)
-        setDisplayDowloadMessage(!displayDowloadMessage)
+        setDisplayDownloadMessage(!displayDownloadMessage)
     }
 
     return(
         <header className={styles.header}>
             <div className={styles.imagesContainer}>
-                <h3 onClick={handleClick}>Dowload CV</h3>
+                <h3 onClick={handleClick}>Download CV</h3>
                 
                 <div className={styles.twoImagesContainer}>
                 <figure className={styles.socialsContainer}>
@@ -67,12 +67,12 @@ const Header = ()=>{
 
             <div className={styles.bottomLine}></div>
 
-            <div className={displayDowloadMessage ? styles.displayCard : styles.displayCardOff}>
-                <p>are you sure you want to dowload Luis Manzano's cv?</p>
+            <div className={displayDownloadMessage ? styles.displayCard : styles.displayCardOff}>
+                <p>are you sure you want to download Luis Manzano's cv?</p>
 
                 <div className={styles.displayCardBtnsContainer}>
-                    <button onClick={cancelDowload}>cancel</button>
-                    <button onClick={handleDownloadCv}>Dowload</button>
+                    <button onClick={cancelDownload}>cancel</button>
+                    <button onClick={handleDownloadCv}>Download</button>
                 </div>
             </div>
         </header>

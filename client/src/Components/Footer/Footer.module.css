@@ -101,6 +101,18 @@
     }
 }
 
+.successMessageOff {
+    color: #4EE1A0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: none;
+}
+
+.successMessage {
+    display: block;
+}
+
 .socialsContainer {
     height: 3rem;
 }

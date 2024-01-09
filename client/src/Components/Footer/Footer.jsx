@@ -11,6 +11,7 @@ const API_URL = "http://localhost:3001"
 
 import { useState } from 'react'
 const Footer = ()=>{
+    const [successMessage, setSuccessMessage] = useState(false)
     
     const [mailInfo, setMailInfo] = useState({
         subject: '',
@@ -54,6 +55,11 @@ const Footer = ()=>{
             try {
                 const response = await axios.post(`${API_URL}/send`, mailInfo)
                 console.log("message sent", response.data, mailInfo)
+
+                setSuccessMessage(true)
+                setTimeout(()=>{
+                    setSuccessMessage(false)
+                },3000)
                
                 //cleaning state
                 setMailInfo({
@@ -91,6 +97,9 @@ const Footer = ()=>{
                 {formErrors.text && <span className={styles.error}>{formErrors.text}</span>}
 
                 <button type="submit">send message</button>
+                {successMessage && (
+                    <p className={`${styles.successMessageOff} ${styles.successMessage}`}>Emal sent succesfully</p>
+                )}
             </form>
             
             <div className={styles.bottomLine}></div>

@@ -74,7 +74,7 @@ const Footer = ()=>{
 
             <div className={styles.footerTextContainer}>
             <h2>Contact</h2>
-            <p></p>
+            <p>Whether you're working on an exciting project or have a unique idea in mind, I'm here and ready to collaborate! so don't hesitate to contact me</p>
             </div>
 
             <form className={styles.footerForm} onSubmit={handleSubmit}>

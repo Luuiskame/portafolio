@@ -26,6 +26,7 @@ const postEmail = async (req,res)=>{
         res.status(200).send("mail sent succesfully")
         
     } catch (error) {
+        res.status(400).json(error)
         console.log(error)
     }
 }

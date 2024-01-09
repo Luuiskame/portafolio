@@ -17,27 +17,55 @@ const Footer = ()=>{
         from: '',
         text: ''
     })
+
+    const [formErrors, setFormErrors] = useState({})
     
     const handleChange = (event)=>{
         const {name, value} = event.target
         setMailInfo({...mailInfo, [name]:value})
     }
 
+    const validateForm = () => {
+        const errors = {};
+        if (!mailInfo.subject.trim()) {
+            errors.subject = 'Subject is required';
+        }
+        if (!mailInfo.from.trim()) {
+            errors.from = 'Email is required';
+        } else if (!/^\S+@\S+\.\S+$/.test(mailInfo.from)) {
+            errors.from = 'Invalid email format';
+        }
+        if (!mailInfo.text.trim()) {
+            errors.text = 'Message is required';
+        } else if (mailInfo.text.length < 20) {
+            errors.text = 'Message should be at least 20 characters long';
+        } else if (mailInfo.text.length > 200) {
+            errors.text = 'Message should not exceed 200 characters';
+        }
+        setFormErrors(errors);
+        return Object.keys(errors).length === 0;
+    };
+
     const handleSubmit = async (event)=>{
         event.preventDefault()
-        try {
-            const response = await axios.post(`${API_URL}/send`, mailInfo)
-            console.log("message sent", response.data, mailInfo)
-           
-            //cleaning state
-            setMailInfo({
-                subject: '',
-                from: '',
-                text: ''
-            })
-        } catch (error) {
-            window.alert("error sending mail: ", error)
+        const isFormvalid = validateForm()
+
+        if(isFormvalid){
+            try {
+                const response = await axios.post(`${API_URL}/send`, mailInfo)
+                console.log("message sent", response.data, mailInfo)
+               
+                //cleaning state
+                setMailInfo({
+                    subject: '',
+                    from: '',
+                    text: ''
+                })
+            } catch (error) {
+                window.alert("error sending mail: ", error)
+            }
         }
+        
     }
     return(
         <footer className={styles.footer}>
@@ -52,12 +80,15 @@ const Footer = ()=>{
             <form className={styles.footerForm} onSubmit={handleSubmit}>
                 <label htmlFor="subject">subject</label>
                 <input type="text" name="subject" value={mailInfo.subject} onChange={handleChange} placeholder='Your reason to contact me'/>
+                {formErrors.subject && <span className={styles.error}>{formErrors.subject}</span>}
 
                 <label htmlFor="from">email</label>
                 <input type="text" name="from" value={mailInfo.from} onChange={handleChange} placeholder='example@yourmail.com'/>
+                {formErrors.from && <span className={styles.error}>{formErrors.from}</span>}
 
                 <label htmlFor="text">message</label>
                 <input className={styles.messageInput} type="text" name='text' value={mailInfo.text} onChange={handleChange}/>
+                {formErrors.text && <span className={styles.error}>{formErrors.text}</span>}
 
                 <button type="submit">send message</button>
             </form>

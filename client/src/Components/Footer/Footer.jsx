@@ -5,7 +5,33 @@ import linkedinLogo from '../../assets/icons8-linkedin.svg'
 const github = "https://github.com/Luuiskame"
 const linkedin = "https://www.linkedin.com/in/luis-manzano-088635258"
 
+import axios from 'axios'
+
+const API_URL = "http://localhost:3001"
+
+import { useState } from 'react'
 const Footer = ()=>{
+    
+    const [mailInfo, setMailInfo] = useState({
+        subject: '',
+        from: '',
+        text: ''
+    })
+    
+    const handleChange = (event)=>{
+        const {name, value} = event.target
+        setMailInfo({...mailInfo, [name]:value})
+    }
+
+    const handleSubmit = async (event)=>{
+        event.preventDefault()
+        try {
+            const response = await axios.post(`${API_URL}/send`, mailInfo)
+            console.log("message sent", response.data, mailInfo)
+        } catch (error) {
+            window.alert("error sending mail: ", error)
+        }
+    }
     return(
         <footer className={styles.footer}>
 
@@ -16,15 +42,15 @@ const Footer = ()=>{
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, praesentium odio deserunt iusto impedit reprehenderit error distinctio non ratione ex culpa deleniti pariatur nam expedita ad ipsa nostrum modi inventore?</p>
             </div>
 
-            <form className={styles.footerForm}>
-                <label htmlFor="name">name</label>
-                <input type="text" name="name"/>
+            <form className={styles.footerForm} onSubmit={handleSubmit}>
+                <label htmlFor="subject">subject</label>
+                <input type="text" name="subject" value={mailInfo.subject} onChange={handleChange}/>
 
-                <label htmlFor="email">email</label>
-                <input type="text" name="email"/>
+                <label htmlFor="from">email</label>
+                <input type="text" name="from" value={mailInfo.from} onChange={handleChange}/>
 
-                <label htmlFor="message">message</label>
-                <input className={styles.messageInput} type="text" name='message' />
+                <label htmlFor="text">message</label>
+                <input className={styles.messageInput} type="text" name='text' value={mailInfo.text} onChange={handleChange}/>
 
                 <button type="submit">send message</button>
             </form>

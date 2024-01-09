@@ -18,7 +18,7 @@ const postEmail = async (req,res)=>{
         const message = {
             to: "yuiftw05@gmail.com",
             subject: subject,
-            text: `Email sent by ${from}: ${text}`
+            text: `Mail sent by ${from}: ${text}`
         }
         const transport = nodemailer.createTransport(config)
 

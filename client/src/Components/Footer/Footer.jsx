@@ -28,6 +28,11 @@ const Footer = ()=>{
         try {
             const response = await axios.post(`${API_URL}/send`, mailInfo)
             console.log("message sent", response.data, mailInfo)
+            setMailInfo({
+                subject: '',
+                from: '',
+                text: ''
+            })
         } catch (error) {
             window.alert("error sending mail: ", error)
         }

@@ -28,6 +28,8 @@ const Footer = ()=>{
         try {
             const response = await axios.post(`${API_URL}/send`, mailInfo)
             console.log("message sent", response.data, mailInfo)
+           
+            //cleaning state
             setMailInfo({
                 subject: '',
                 from: '',
@@ -44,15 +46,15 @@ const Footer = ()=>{
 
             <div className={styles.footerTextContainer}>
             <h2>Contact</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, praesentium odio deserunt iusto impedit reprehenderit error distinctio non ratione ex culpa deleniti pariatur nam expedita ad ipsa nostrum modi inventore?</p>
+            <p></p>
             </div>
 
             <form className={styles.footerForm} onSubmit={handleSubmit}>
                 <label htmlFor="subject">subject</label>
-                <input type="text" name="subject" value={mailInfo.subject} onChange={handleChange}/>
+                <input type="text" name="subject" value={mailInfo.subject} onChange={handleChange} placeholder='Your reason to contact me'/>
 
                 <label htmlFor="from">email</label>
-                <input type="text" name="from" value={mailInfo.from} onChange={handleChange}/>
+                <input type="text" name="from" value={mailInfo.from} onChange={handleChange} placeholder='example@yourmail.com'/>
 
                 <label htmlFor="text">message</label>
                 <input className={styles.messageInput} type="text" name='text' value={mailInfo.text} onChange={handleChange}/>

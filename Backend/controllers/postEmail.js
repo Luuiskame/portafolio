@@ -11,8 +11,8 @@ const postEmail = async (req,res)=>{
             port: 456,
             secure: true,
             auth: {
-                user: "yuiftw05@gmail.com",
-                pass: "brrc rmws lxhe hmph",
+                user: MAIL,
+                pass: PASSWORD,
             }
         }
         const message = {

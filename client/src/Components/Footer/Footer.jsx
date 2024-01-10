@@ -74,7 +74,7 @@ const Footer = ()=>{
         
     }
     return(
-        <footer className={styles.footer}>
+        <footer className={styles.footer} id='footer'>
 
             <div className={styles.widthContainer}>
 

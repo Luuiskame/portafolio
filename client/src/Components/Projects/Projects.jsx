@@ -26,7 +26,9 @@ const Projects = ()=>{
         <div className={styles.projectsMainContainer}>
             <div className={styles.titleAndContactBtnContainer}>
                 <h1>Projects</h1>
+                <a href="#footer">
                 <button>Contact me</button>
+                </a>
 
             </div>
                 

@@ -62,7 +62,9 @@ const Header = ()=>{
             <h1>Nice to meet you! I'm <span className={styles.h1Gradient}>Luis Manzano</span></h1>
             <p>Based in Honduras, I'm a passionate individual enthusiastic about web development and responsive design. I have a keen interest in learning new technologies to continuously expand my skill set</p>
 
+            <a href="#footer">
             <button>Contact me</button>
+            </a>
             </div>
 
             <div className={styles.bottomLine}></div>

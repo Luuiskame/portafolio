@@ -7,7 +7,7 @@ const linkedin = "https://www.linkedin.com/in/luis-manzano-088635258"
 
 import axios from 'axios'
 
-const API_URL = "http://localhost:3001"
+const API_URL = import.meta.env.MODE === 'development' ? 'http://localhost:3001' : 'https://portafolio-backend-jet.vercel.app/'
 
 import { useState } from 'react'
 const Footer = ()=>{

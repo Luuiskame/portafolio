@@ -72,6 +72,7 @@
 
     & button{
         margin-top: 1.6rem;
+        margin-bottom: 2rem;
         padding: max-content;
         letter-spacing: 2px;
         font-size: 1rem;

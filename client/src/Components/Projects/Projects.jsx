@@ -14,7 +14,7 @@ const rockGameUrl = "https://github.com/Luuiskame/rock-paper-scissors-game"
 const rockGameDeploy = "https://luuiskame.github.io/rock-paper-scissors-game/"
 
 const dogsAppUrl = "https://github.com/Luuiskame/DogsAppv3"
-const dogsAppDeploy = ""
+const dogsAppDeploy = "https://dogs-appv3-r3yj.vercel.app/"
 
 const rickUrl = "https://github.com/Luuiskame/RickAndMortyApp"
 const rickDeploy = ""

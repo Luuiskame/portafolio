@@ -3,7 +3,7 @@ import styles from './Projects.module.css'
 
 //Projects images
 import EngPartner from '../../assets/ProjectsPictures/image.png'
-import dogsAppPicture from '../../assets/ProjectsPictures/dogsApp.png'
+import dogsAppPicture from '../../assets/ProjectsPictures/dogsAppV2.png'
 import rickandmoryAppPicture from '../../assets/ProjectsPictures/rickAndMortyApp.png'
 import rockScissorsPaperGameAppPicture from '../../assets/ProjectsPictures/RockScissorsAndPapersGameProject.png'
 

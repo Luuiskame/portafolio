@@ -17,7 +17,7 @@ const dogsAppUrl = "https://github.com/Luuiskame/DogsAppv3"
 const dogsAppDeploy = "https://dogs-appv3-r3yj.vercel.app/"
 
 const rickUrl = "https://github.com/Luuiskame/RickAndMortyApp"
-const rickDeploy = ""
+const rickDeploy = "https://rick-and-morty-app-frontend.vercel.app/"
 
 
 

@@ -7,7 +7,7 @@ import mainImage from '../../assets/ProjectsPictures/main-picture-portafolio.jpg
 // socials 
 const github = "https://github.com/Luuiskame"
 const linkedin = "https://www.linkedin.com/in/luis-manzano-088635258"
-// import cv from '../../assets/Luis-manzanoCV.pdf'
+// import cv from '../../assets/Luis-Manzano-CV.pdf'
 import { useState } from 'react'
 
 const Header = ()=>{
@@ -24,7 +24,7 @@ const Header = ()=>{
 
     const handleDownloadCv = () => {
         const link = document.createElement('a')
-        link.href = '/Luis-manzanoCV.pdf'
+        link.href = '/Luis-Manzano-CV.pdf'
         link.download = 'LuisManzanoCV.pdf'
         document.body.appendChild(link)
         link.click();

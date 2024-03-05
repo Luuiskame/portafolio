@@ -24,7 +24,7 @@ const Header = ()=>{
 
     const handleDownloadCv = () => {
         const link = document.createElement('a')
-        link.href = '/Luis-Manzano-CV.pdf'
+        link.href = '/Luis_Manzano_CV.pdf'
         link.download = 'LuisManzanoCV.pdf'
         document.body.appendChild(link)
         link.click();

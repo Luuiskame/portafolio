@@ -9,6 +9,8 @@ const Skills = ()=>{
                 <h2>Javascript</h2>
                 <h2>React</h2>
                 <h2>Redux</h2>
+                <h2>Github</h2>
+                <h2>Git</h2>
             </div>
 
             <div className={styles.backendAndDatabaseSkills}>

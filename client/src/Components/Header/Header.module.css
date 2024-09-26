@@ -1,189 +1,103 @@
 .header {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
-.imagesContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
 
-    & h3 {
-        letter-spacing: 2px;
-        cursor: pointer;
+.mainImageContainer {
+  width: 14rem;
 
-        &:hover{
-            color: #c9d6df;
-        }
-    }
-}
-
-.twoImagesContainer {
-    display: flex;
-    gap: .6rem;
-}
-
-.socialsContainer {
-    height: 3rem;
-}
-
-.socialsContainer img {
+  & img {
     width: 100%;
     height: 100%;
-}
-
-.mainImageContainer{
-    width: 14rem;
-
-    & img{
-        width: 100%;
-        height: 100%;
-    }
+  }
 }
 
 .headerTextContainer {
-    text-align: center;
-    max-width: 600px;
-    
+  text-align: center;
+  max-width: 600px;
 
-    & button{
-        margin-top: 1.6rem;
-        padding: max-content;
-        letter-spacing: 2px;
-        font-size: 1rem;
-        font-weight: bold;
-        border: none;
-        background: transparent;
-        cursor: pointer;
+  & button {
+    margin-top: 1.6rem;
+    padding: max-content;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    cursor: pointer;
 
-        &::after{
-            content: '';
-            margin-top: .6em;
-            position: absolute;
-            width: 110px;
-            height: 3px; 
-            background-color: #4EE1A0;
-            display: block;
-        }
-
-        &:hover {
-            color: #4EE1A0;
-        }
-
+    &::after {
+      content: "";
+      margin-top: 0.6em;
+      position: absolute;
+      width: 110px;
+      height: 3px;
+      background-color: #4ee1a0;
+      display: block;
     }
 
-    & p {
-        margin-top: .8rem;
-        font-weight: 500;
-        line-height: 1.3;
-        color: #d9d9d9;
+    &:hover {
+      color: #4ee1a0;
     }
+  }
 
-    & h1 {
-        font-weight: 700;
-        font-size: 2.6rem;
-    }
-    
+  & p {
+    margin-top: 0.8rem;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #d9d9d9;
+  }
+
+  & h1 {
+    font-weight: 700;
+    font-size: 2.6rem;
+  }
 }
 
 .bottomLine {
-    height: 3px;
-    width: 100%;
-    background-color: #D8D8D8;
+  height: 3px;
+  width: 100%;
+  background-color: #d8d8d8;
 }
 
-.displayCardOff {
-    display: none;
-}
+@media screen and (min-width: 768px) {
+  .header {
+    display: grid;
+    grid-template-areas:
+      "navbar navbar"
+      "textWithImage image"
+      "line line";
+  }
 
-.displayCard {
-    text-align: center;
-    position: absolute;
-    background-color: red;
-    height: 250px;
-    width: 55%;
-    max-width: 300px;
-    top: 35%;
+  .imagesContainer {
+    grid-area: navbar;
+  }
 
-    display: flex;
-    flex-direction: column;
-    gap: 3em;
-    border: 1px solid #32b1fe;
-    background-color: #001e32;
-    border-radius: 5px;
+  .headerTextContainer {
+    text-align: start;
+    grid-area: textWithImage;
+    justify-self: start;
 
-    & p{
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 2rem;
-        font-weight: 700;
-        font-size: 1.1rem;
-    }
-}
-
-.displayCardBtnsContainer {
-    display: flex;
-    justify-content: center;
-    width: 90%;
-    margin: 0 auto;
-    gap: .4rem;
-
-    & button{
-        width: 50%;
-        height: 40px;
-        max-width: 100px;
-        border: 1px solid #32b1fe;
-        background-color: transparent;
-        cursor: pointer;
-        &:hover{
-            background-color: #031927;
-        }
+    & h1 {
+      font-size: 4rem;
     }
 
-    
-}
-@media screen and (min-width: 768px){
-    .header {
-        display: grid;
-        grid-template-areas:
-            "navbar navbar"
-            "textWithImage image"
-            "line line";
+    & p {
+      font-size: 1.2rem;
     }
+  }
 
-    .imagesContainer{
-        grid-area: navbar;
-    }
+  .mainImageContainer {
+    grid-area: image;
+    min-width: 18rem;
+    width: 60%;
+  }
 
-    .headerTextContainer{
-        text-align: start;
-        grid-area: textWithImage;
-        justify-self: start;
-
-        & h1{
-            font-size: 4rem;
-        }
-
-        & p {
-            font-size: 1.2rem;
-        }
-    } 
-
-    .mainImageContainer{
-        grid-area: image;
-        min-width: 18rem;
-        width: 60%;
-    }
-
-    .bottomLine{
-        grid-area: line;
-    }
-    .displayCard {
-        justify-self: center;
-        max-width: 400px;
-    }
+  .bottomLine {
+    grid-area: line;
+  }
 }

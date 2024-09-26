@@ -15,7 +15,7 @@ const projects = [
     picture: pawpalPicture,
     description:
       "Pawpal is a social community platform for pet lovers, and its full responsive!",
-      welcomeAccount: { email: "akaluis91@gmail.com", password: "hola12345" },
+      welcomeAccount: { email: "testtest01@gmail.com", password: "usertest001" },
   },
   {
     name: "EngPartner",
@@ -70,8 +70,7 @@ const Projects = () => {
             {project.welcomeAccount && (
               <div className={styles.welcomeAccount}>
                 <p>
-                  You can register, but also feel free to use this welcome
-                  account:
+                  Demo account:
                 </p>
                 <div className={styles.dataContainer}>
                 <p>Email: {project.welcomeAccount.email}</p>
@@ -82,12 +81,12 @@ const Projects = () => {
             <div className={styles.projectBtnsContainer}>
               <button>
                 <a href={project.deployUrl} target="_blank">
-                  View Project
+                  Live demo
                 </a>
               </button>
               <button>
                 <a href={project.githubUrl} target="_blank">
-                  View Code
+                  Source code
                 </a>
               </button>
             </div>

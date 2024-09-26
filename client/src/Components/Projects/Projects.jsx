@@ -15,7 +15,7 @@ const projects = [
     picture: pawpalPicture,
     description:
       "Pawpal is a social community platform for pet lovers, and its full responsive!",
-      welcomeAccount: { email: "testtest01@gmail.com", password: "usertest001" },
+      welcomeAccount: { email: "testtest01@gmail.com", password: "Test00111" },
   },
   {
     name: "EngPartner",

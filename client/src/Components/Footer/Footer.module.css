@@ -33,7 +33,6 @@
     margin: 0 auto;
     gap: .6rem;
     position: relative;
-
     & label {
         margin-top: 3rem;
         margin-bottom: .6rem;
@@ -112,10 +111,11 @@
     display: block;
     position: absolute;
     color: #4EE1A0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
     text-transform: uppercase;
-    top: 92%;
+    width: 100%;
+    top: 105%;
 }
 
 .socialsContainer {
@@ -139,6 +139,10 @@
         "socials socials";
     }
 
+    .successMessage {
+        top: 92%;
+    }
+
     .footerTextContainer {
         grid-area: contact;
         max-width: 500px;
@@ -160,6 +164,7 @@
 
     .footerForm{
         grid-area: form;
+        min-width: 370px;
 
         & button {
             margin-top: 0;

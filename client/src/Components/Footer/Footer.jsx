@@ -93,7 +93,7 @@ const Footer = ()=>{
                 {formErrors.from && <span className={styles.error}>{formErrors.from}</span>}
 
                 <label htmlFor="text">message</label>
-                <input className={styles.messageInput} type="text" name='text' value={mailInfo.text} onChange={handleChange}/>
+                <textarea className={styles.messageInput} type="text" name='text' value={mailInfo.text} onChange={handleChange}/>
                 {formErrors.text && <span className={styles.error}>{formErrors.text}</span>}
 
                 <button type="submit">send message</button>

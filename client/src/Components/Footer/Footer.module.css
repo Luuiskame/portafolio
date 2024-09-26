@@ -33,6 +33,7 @@
     margin: 0 auto;
 
     & label {
+        margin-top: 3rem;
         margin-bottom: .6rem;
         text-transform: uppercase;
     }
@@ -42,7 +43,7 @@
         border: none;
         border-bottom: 1px solid  #D8D8D8;
         background-color: transparent;
-        margin-bottom: 4rem;
+        height: 2.2rem;
     }
 
     & button{
@@ -74,7 +75,7 @@
 
 .error {
     color: red;
-    margin-bottom: 1.6rem;
+    margin-top: .6rem;
 }
 
 .eachForm {
@@ -82,8 +83,8 @@
 }
 
 .messageInput {
-    padding: 4rem;
-    text-align: start;
+    background-color: transparent;
+    height: 10rem;
 }
 
 .twoImagesContainer {
@@ -124,7 +125,7 @@
     .widthContainer {
         width: 80%;
         margin: 0 auto;
-        margin-top: 4rem;
+        margin-top: 1rem;
         display: grid;
         grid-template-areas: 
         "contact form"

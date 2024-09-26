@@ -12,6 +12,7 @@ const API_URL = import.meta.env.MODE === 'development' ? 'http://localhost:3001'
 import { useState } from 'react'
 const Footer = ()=>{
     const [successMessage, setSuccessMessage] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
     
     const [mailInfo, setMailInfo] = useState({
         subject: '',
@@ -37,9 +38,10 @@ const Footer = ()=>{
         } else if (!/^\S+@\S+\.\S+$/.test(mailInfo.from)) {
             errors.from = 'Invalid email format';
         }
-        if (!mailInfo.text.trim()) {
+        if (!mailInfo.text) {
             errors.text = 'Message is required';
-        } else if (mailInfo.text.length < 20) {
+            // remember trim does not affect internal spaces, only at the end and the beginning!
+        } else if (mailInfo.text.trim().length < 20) {
             errors.text = 'Message should be at least 20 characters long';
         } else if (mailInfo.text.length > 200) {
             errors.text = 'Message should not exceed 200 characters';
@@ -54,8 +56,10 @@ const Footer = ()=>{
 
         if(isFormvalid){
             try {
+                setIsLoading(true)
                 const response = await axios.post(`${API_URL}/send`, mailInfo)
                 console.log("message sent", response.data, mailInfo)
+                setIsLoading(false)
 
                 setSuccessMessage(true)
                 setTimeout(()=>{
@@ -70,6 +74,7 @@ const Footer = ()=>{
                 })
             } catch (error) {
                 window.alert("error sending mail: ", error)
+                setIsLoading(false)
             }
         }
         
@@ -97,7 +102,7 @@ const Footer = ()=>{
                 <textarea className={styles.messageInput} type="text" name='text' value={mailInfo.text} onChange={handleChange}/>
                 {formErrors.text && <span className={styles.error}>{formErrors.text}</span>}
 
-                <button type="submit">send message</button>
+                <button type="submit">{isLoading ? "Loading..." : "send message"}</button>
                 {successMessage && (
                     <p className={`${styles.successMessageOff} ${styles.successMessage}`}>Emal sent succesfully</p>
                 )}

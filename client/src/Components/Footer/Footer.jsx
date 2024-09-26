@@ -24,6 +24,7 @@ const Footer = ()=>{
     const handleChange = (event)=>{
         const {name, value} = event.target
         setMailInfo({...mailInfo, [name]:value})
+        setFormErrors({})
     }
 
     const validateForm = () => {

@@ -2,9 +2,10 @@ import styles from "./Projects.module.css";
 
 //Projects images
 import infinitifyAppPicture from "../../assets/ProjectsPictures/infinify.png";
-import rickandmoryAppPicture from "../../assets/ProjectsPictures/rickAndMortyApp.png";
+import modelsPublicidadAppPicture from "../../assets/ProjectsPictures/models-publicidad.png";
 import hontechPicture from "../../assets/ProjectsPictures/hontech.png";
-import pawpalPicture from "../../assets/ProjectsPictures/pawpal.webp";
+import miRinconcito from "../../assets/ProjectsPictures/mi-rinconcitov2.png";
+
 
 const projects = [
   {
@@ -17,30 +18,30 @@ const projects = [
     // welcomeAccount: { email: "akaluis91@gmail.com", password: "hola12345" },
   },
   {
-    name: "Pawpal Community",
-    githubUrl: "https://github.com/Pawpal-community/Pawpal-web",
-    deployUrl: "https://pawpalcommunity.vercel.app/login",
-    picture: pawpalPicture,
+    name: "Models Publicidad",
+    githubUrl: "https://github.com/Pawpal-community/Models-publicidad",
+    deployUrl: "https://modelspublicidad.com/",
+    picture: modelsPublicidadAppPicture,
     description:
-      "Pawpal is a social community platform for pet lovers, and its full responsive!",
-      welcomeAccount: { email: "testtest01@gmail.com", password: "Test00111" },
+      "Landing page for a company in Honduras that has a wide variety of models for advertising and brand promotion. With custom catalog and ultrafast loading.",
+  },
+  {
+    name: "Mi Rinconcito",
+    githubUrl: "https://github.com/Luuiskame/Mi-riconcito",
+    deployUrl: "https://mi-rinconcito.netlify.app/en/",
+    picture: miRinconcito,
+    description:
+      "Bilingual Website for a agency that helps teachers with resources and tools to teach.",
   },
   {
     name: "Hontech",
-    githubUrl: "https://github.com/Luuiskame/DogsAppv3",
-    deployUrl: "https://dogs-appv3-r3yj.vercel.app/",
+    githubUrl: "https://github.com/Pawpal-community/oLSolutions-Landing-pagev2",
+    deployUrl: "https://hontechn.com/",
     picture: hontechPicture,
     description:
-      "Landing page for a technology company, with a modern design, ultrafast and responsive layout.",
+      "Bilingual Landing page for a technology company, with a modern design, ultrafast and responsive layout.",
   },
-  {
-    name: "Rick and Morty App",
-    githubUrl: "https://github.com/Luuiskame/RickAndMortyApp",
-    deployUrl: "https://rick-and-morty-app-frontend.vercel.app/",
-    picture: rickandmoryAppPicture,
-    description:
-      "App that fetches and displays character information with filtering, favorites and searching features.",
-  },
+  
 ];
 
 const Projects = () => {

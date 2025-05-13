@@ -1,28 +1,22 @@
 import styles from './Skills.module.css'
 
 const Skills = ()=>{
+    const frontendSkills = ["React", "Nextjs", "Astro", "CSS", "Typescript", "Redux", "tailwind", "Git"];
+  
+  // Backend and database skills
+  const backendSkills = ["Node.js", "Express", "Supabase", "Web sockets", "Sequelize", "PostgreSQL", "Firebase"];
     return(
         <div className={styles.skillsContainer}>
             <div className={styles.frontendSkills}>
-                <h2>React</h2>
-                <h2>NextJs</h2>
-                <h2>CSS</h2>
-                <h2>Tailwind</h2>
-                <h2>Typescript</h2>
-                <h2>Redux toolkit</h2>
-                <h2>Astro</h2>
-                <h2>Git</h2>
+                {frontendSkills.map((skill, index) => (
+                    <h2 key={index}>{skill}</h2>
+                ))}
             </div>
 
             <div className={styles.backendAndDatabaseSkills}>
-                <h2>Node.js</h2>
-                <h2>Express</h2>
-                <h2>Web sockets</h2>
-                <h2>Supabase</h2>
-                <h2>Sequelize</h2>
-                <h2>PostgreSQL</h2>
-                <h2>Firebase</h2>
-                <h2>Redis</h2>
+                {backendSkills.map((skill, index) => (
+                    <h2 key={index}>{skill}</h2>
+                ))}
             </div>
 
             <div className={styles.bottomLine}></div>

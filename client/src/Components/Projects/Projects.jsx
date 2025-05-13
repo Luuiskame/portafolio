@@ -1,13 +1,21 @@
 import styles from "./Projects.module.css";
 
 //Projects images
-import EngPartner from "../../assets/ProjectsPictures/image.png";
-import dogsAppPicture from "../../assets/ProjectsPictures/dogsappv3.webp";
+import infinitifyAppPicture from "../../assets/ProjectsPictures/infinify.png";
 import rickandmoryAppPicture from "../../assets/ProjectsPictures/rickAndMortyApp.png";
-import rockScissorsPaperGameAppPicture from "../../assets/ProjectsPictures/RockScissorsAndPapersGameProject.png";
+import hontechPicture from "../../assets/ProjectsPictures/hontech.png";
 import pawpalPicture from "../../assets/ProjectsPictures/pawpal.webp";
 
 const projects = [
+  {
+    name: "infinify",
+    githubUrl: "https://github.com/Luuiskame/Infinify",
+    deployUrl: "https://infinify-v1.vercel.app/",
+    picture: infinitifyAppPicture,
+    description:
+      "Social media platform for Music lovers, where users can create and share playlists, send messages and compare music taste, and discover new music.",
+    // welcomeAccount: { email: "akaluis91@gmail.com", password: "hola12345" },
+  },
   {
     name: "Pawpal Community",
     githubUrl: "https://github.com/Pawpal-community/Pawpal-web",
@@ -18,28 +26,12 @@ const projects = [
       welcomeAccount: { email: "testtest01@gmail.com", password: "Test00111" },
   },
   {
-    name: "EngPartner",
-    githubUrl: "https://github.com/Luuiskame/EngPartnerV2",
-    deployUrl: "https://engpartner-aa0ce.web.app/",
-    picture: EngPartner,
-    description:
-      "Platform designed to connect language learners. It features real-time chat translation",
-    welcomeAccount: { email: "akaluis91@gmail.com", password: "hola12345" },
-  },
-  // {
-  //   name: "Rock Paper Scissors Game",
-  //   githubUrl: "https://github.com/Luuiskame/rock-paper-scissors-game",
-  //   deployUrl: "https://luuiskame.github.io/rock-paper-scissors-game/",
-  //   picture: rockScissorsPaperGameAppPicture,
-  //   description: "A simple Rock-Paper-Scissors game built using web technologies, where users can play against the computer with a modern UI."
-  // },
-  {
-    name: "Dogs App",
+    name: "Hontech",
     githubUrl: "https://github.com/Luuiskame/DogsAppv3",
     deployUrl: "https://dogs-appv3-r3yj.vercel.app/",
-    picture: dogsAppPicture,
+    picture: hontechPicture,
     description:
-      "Dogs App allows users to search, filter, and view detailed information about various dog breeds.",
+      "Landing page for a technology company, with a modern design, ultrafast and responsive layout.",
   },
   {
     name: "Rick and Morty App",
@@ -64,6 +56,7 @@ const Projects = () => {
       <div className={styles.projectsContainer}>
         {projects.map((project) => (
           <figure key={project.name} className={styles.projectContainer}>
+            <h2 className={styles.projectTitle}>{project.name}</h2>
             <img src={project.picture} alt="EngPartner app picture" />
 
             <h3>{project.description}</h3>

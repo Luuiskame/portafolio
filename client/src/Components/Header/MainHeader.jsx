@@ -19,7 +19,7 @@ export default function MainHeader() {
 
   const handleDownloadCv = () => {
     const link = document.createElement("a");
-    link.href = "/Luis-Manzano-CV-frontend.pdf";
+    link.href = "/Luis_Manzano_CV_FullStackDeveloper.pdf";
     link.download = "LuisManzanoCV.pdf";
     document.body.appendChild(link);
     link.click();

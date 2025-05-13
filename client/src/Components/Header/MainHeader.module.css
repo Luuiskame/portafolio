@@ -110,6 +110,47 @@
     }
   }
 }
+
+.displayCardBase {
+  position: absolute;
+  text-align: center;
+  height: 250px;
+  width: 90%;
+  margin: 0 auto;
+  top: 10rem;
+  left: 5%;
+  background-color: #001e32;
+  border: 1px solid #32b1fe;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.displayCardEnter {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.displayCardExit {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+
+.displayCardBase p {
+  width: 90%;
+  margin: 2rem auto 0 auto;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
 @media screen and (min-width: 768px) {
   .mainImageContainer {
     grid-area: image;
